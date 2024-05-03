@@ -1,0 +1,172 @@
+@import '_variables.scss';
+
+.dashboard {
+   display: grid;
+   grid-template-columns: 300px 1fr;
+   height: calc(100% - 80px);
+}
+
+nav.menu {
+   padding-top: 10px;
+   background: $grey;
+   border-right: 1px solid $border;
+   // width: 220px;
+   ul {
+      list-style-type: none;
+   }
+}
+ul.menu-links li {
+   font-weight: 500;
+   color: black;
+   margin: 0px 10px;
+   border-radius: 5px;
+   cursor: pointer;
+   &:hover {
+      background: $grey-hover;
+   }
+   a {
+      display: block;
+      padding: 10px 20px;
+      width: 100%;
+      height: 100%;
+      text-decoration: none;
+      color: inherit;
+   }
+}
+
+li.active {
+   background: $primary;
+   color: white !important;
+   &:hover {
+      background: $primary-hover !important;
+   }
+}
+
+.admin-view {
+   padding: 30px;
+}
+
+.card {
+   h4:first-child {
+      font-weight: 500;
+      color: #7a7a7a;
+      margin-bottom: 10px;
+   }
+   .icon {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: 10px;
+      right: 10px;
+      border-radius: 10px;
+      padding: 10px;
+   }
+   .icon i {
+      font-size: 1.5em;
+   }
+}
+
+.bg-primary {
+   background: rgba($primary, 0.1);
+}
+.bg-secondary {
+   background: rgba($secondary, 0.1);
+}
+
+table {
+   border-collapse: collapse;
+   border-radius: 5px;
+   overflow: hidden;
+   background: white;
+   width: 100%;
+}
+
+thead {
+   font-weight: 600;
+   text-align: center;
+   background: $primary;
+   color: white;
+   th {
+      padding: 10px 20px;
+      border-right: 1px solid rgba(black, 0.1);
+   }
+}
+tr:nth-child(2n) {
+   background: $grey-hover;
+}
+
+td {
+   padding: 10px;
+   border-right: 1px solid rgba(black, 0.1);
+   &:nth-child(1) {
+      text-align: center;
+      font-weight: 700;
+   }
+   &:last-child {
+      display: flex;
+      gap: 1em;
+      color: red;
+      justify-content: center;
+   }
+   &:last-child a:first-child {
+      color: $primary;
+   }
+   &:last-child a:last-child {
+      color: #ff6060;
+   }
+}
+
+// label {
+//    margin: 0 5px;
+// }
+
+form {
+   background: $grey;
+   border-radius: 10px;
+   padding: 20px;
+   display: flex;
+   flex-direction: column;
+   &.orange {
+      input:focus {
+         box-shadow: inset 0px 0px 0px 2px $secondary;
+         color: $secondary;
+      }
+   }
+   input {
+      font-weight: 500;
+      width: 100%;
+   }
+   label i {
+      color: $primary;
+   }
+}
+
+.floating {
+   position: relative;
+   margin-bottom: 30px;
+   label {
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: all 200ms;
+      opacity: 0.4;
+      cursor: inherit;
+   }
+   input:focus + label,
+   input:valid + label {
+      font-size: 75%;
+      top: -9px;
+      opacity: 1;
+   }
+}
+
+.flex {
+   display: flex;
+   gap: 1em;
+   align-items: center;
+   justify-content: space-between;
+}

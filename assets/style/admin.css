@@ -1,0 +1,164 @@
+.dashboard {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  height: calc(100% - 80px);
+}
+
+nav.menu {
+  padding-top: 10px;
+  background: white;
+  border-right: 1px solid #e2e2e2;
+}
+nav.menu ul {
+  list-style-type: none;
+}
+
+ul.menu-links li {
+  font-weight: 500;
+  color: black;
+  margin: 0px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+ul.menu-links li:hover {
+  background: #eee;
+}
+ul.menu-links li a {
+  display: block;
+  padding: 10px 20px;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+li.active {
+  background: #0361ff;
+  color: white !important;
+}
+li.active:hover {
+  background: #004ed4 !important;
+}
+
+.admin-view {
+  padding: 30px;
+}
+
+.card h4:first-child {
+  font-weight: 500;
+  color: #7a7a7a;
+  margin-bottom: 10px;
+}
+.card .icon {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 10px;
+  right: 10px;
+  border-radius: 10px;
+  padding: 10px;
+}
+.card .icon i {
+  font-size: 1.5em;
+}
+
+.bg-primary {
+  background: rgba(3, 97, 255, 0.1);
+}
+
+.bg-secondary {
+  background: rgba(255, 85, 0, 0.1);
+}
+
+table {
+  border-collapse: collapse;
+  border-radius: 5px;
+  overflow: hidden;
+  background: white;
+  width: 100%;
+}
+
+thead {
+  font-weight: 600;
+  text-align: center;
+  background: #0361ff;
+  color: white;
+}
+thead th {
+  padding: 10px 20px;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+tr:nth-child(2n) {
+  background: #eee;
+}
+
+td {
+  padding: 10px;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+td:nth-child(1) {
+  text-align: center;
+  font-weight: 700;
+}
+td:last-child {
+  display: flex;
+  gap: 1em;
+  color: red;
+  justify-content: center;
+}
+td:last-child a:first-child {
+  color: #0361ff;
+}
+td:last-child a:last-child {
+  color: #ff6060;
+}
+
+form {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+form.orange input:focus {
+  box-shadow: inset 0px 0px 0px 2px #FF5500;
+  color: #FF5500;
+}
+form input {
+  font-weight: 500;
+  width: 100%;
+}
+form label i {
+  color: #0361ff;
+}
+
+.floating {
+  position: relative;
+  margin-bottom: 30px;
+}
+.floating label {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 200ms;
+  opacity: 0.4;
+  cursor: inherit;
+}
+.floating input:focus + label,
+.floating input:valid + label {
+  font-size: 75%;
+  top: -9px;
+  opacity: 1;
+}
+
+.flex {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  justify-content: space-between;
+}/*# sourceMappingURL=admin.css.map */
